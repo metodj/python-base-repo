@@ -24,6 +24,12 @@ We suggest using [Pycharm](https://www.jetbrains.com/pycharm/) as an IDE. After 
 
 ## Development
 
+In order to ensure high code quality, the following is done:
+
+1. For code guide style, [black](https://black.readthedocs.io/en/stable/index.html) auto-formatter is used. Set up 
+[integration with PyCharm](https://black.readthedocs.io/en/stable/integrations/editors.html) so that black reformats 
+your code on every save (via *File Watchers* plugin).
+
 
 
 

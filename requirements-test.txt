@@ -1,0 +1,5 @@
+# This file specifies the dependencies that are needed to test the build. They are not required to run the application
+pytest
+mock
+black
+flake8
