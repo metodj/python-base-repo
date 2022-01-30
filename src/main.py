@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def hello_with_lucky_number(name: str, a: int, b: int, seed: int = 0):
+def hello_with_lucky_number(name: str, a: int, b: int, seed: int = 0) -> str:
     """
 
     :param name:
@@ -10,6 +10,6 @@ def hello_with_lucky_number(name: str, a: int, b: int, seed: int = 0):
     :param seed:
     :return:
     """
-    np.seed(seed)
+    np.random.seed(seed)
     num = np.random.choice(list(range(a, b)), 1)[0]
     return f"Hello {name}! Your lucky number is {num}."
