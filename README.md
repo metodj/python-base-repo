@@ -5,7 +5,7 @@ An example repository for Python projects that aims to use some of the best soft
 * Python >= 3.10
 * Anaconda >= 4.10
 
-## Setup 
+## Setup
 1. Clone or download this repo. `cd` yourself to it's root directory.
 2. Set up a Python virtual enviromnent, e.g. using [Anaconda](https://www.anaconda.com/) this can be achieved with:
 
@@ -13,9 +13,10 @@ An example repository for Python projects that aims to use some of the best soft
 
 `$ conda activate ${env}`
 
-4. Install dependencies, using `pip install -r requirements.txt`
-5. Install test dependencies, using `pip install -r requirement-test.txt`
-6. Test the setup by running `python -m pytest -v`
+4. Install dependencies: `pip install -r requirements.txt`
+5. Install development/test dependencies: `pip install -r requirement-dev.txt`
+6. Set up pre-commit hooks: `pre-commit install`
+7. Test the setup by running `python -m pytest -v`
 
 We suggest using [Pycharm](https://www.jetbrains.com/pycharm/) as an IDE. After following above steps, create a new project in Pycharm with previously configured interpreter (select virtual environment from step 2 above).
 
@@ -26,8 +27,8 @@ We suggest using [Pycharm](https://www.jetbrains.com/pycharm/) as an IDE. After 
 
 In order to ensure high code quality, the following is done:
 
-1. For code guide style, [black](https://black.readthedocs.io/en/stable/index.html) auto-formatter is used. Set up 
-[integration with PyCharm](https://black.readthedocs.io/en/stable/integrations/editors.html) so that black reformats 
+1. For code guide style, [black](https://black.readthedocs.io/en/stable/index.html) auto-formatter is used. Set up
+[integration with PyCharm](https://black.readthedocs.io/en/stable/integrations/editors.html) so that black reformats
 your code on every save (via *File Watchers* plugin).
 
 

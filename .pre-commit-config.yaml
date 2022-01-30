@@ -1,0 +1,14 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.1.0
+  # for list of all available hooks in pre-commit repo, see: https://pre-commit.com/hooks.html
+  hooks:
+    - id: trailing-whitespace
+    - id: end-of-file-fixer
+    - id: requirements-txt-fixer
+- repo: https://github.com/psf/black
+  rev: 22.1.0
+  hooks:
+    - id: black
+      args: [--line-length=120]
+      language_version: python3.10
