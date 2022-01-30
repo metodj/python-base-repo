@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def hello_with_lucky_number(name: str, a: int, b: int, seed: int = 0) -> str:
+def hello_with_lucky_number(name: str, a: int, b: int, seed: int = 0):
     """
 
     :param name:
