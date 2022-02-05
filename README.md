@@ -31,8 +31,9 @@ In order to foster maintainability and accessibility of the code, it is encourag
 #### Misc:
 - [black](https://black.readthedocs.io/en/stable/index.html) formatting can be automated via
 [integration with PyCharm](https://black.readthedocs.io/en/stable/integrations/editors.html). Use *File Watchers* plugin so that black reformats
-your code on every save.
+your code on every save. Use [pyproject.toml](https://github.com/metodj/python-base-repo/blob/main/pyproject.toml) to specify **black** configurations inside Pycharm.
 - for docstring style, [**reST** format](https://stackoverflow.com/a/24385103/9816164) is used (this is also Pycharm's default docstirngs format)
+- for [CI pipeline](https://realpython.com/python-continuous-integration/), [Github Actions](https://docs.github.com/en/actions) are used (see [main_ci_cd.yml](https://github.com/metodj/python-base-repo/blob/main/.github/workflows/main_ci_cd.yml))
 
 
 
