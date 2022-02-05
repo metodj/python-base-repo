@@ -1,1 +1,50 @@
-# TODO
+name: CI/CD Main Branch
+
+on:
+  push:
+    branches:
+      - main
+#  schedule:
+#    - cron:  '10 4 * * *'
+
+jobs:
+  test:
+    runs-on: [ self-hosted, ubuntu-18.04 ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+
+      - name: Setup Virtual Environment
+        id: cache-virtualenv
+        uses: syphar/restore-virtualenv@v1.2
+        with:
+          requirement_files: requirements*.txt
+          custom_cache_key_element: python-base-repo
+          custom_virtualenv_dir: python-base-repo-venv
+
+      - name: Download pip cache
+        uses: syphar/restore-pip-download-cache@v1
+        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+        with:
+          custom_cache_key_element: python-base-repo
+
+      - name: Install dependencies
+        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+        run: |
+          pip install --upgrade pip
+          pip install --disable-pip-version-check --upgrade -r requirements-dev.txt
+          pip install --disable-pip-version-check --upgrade -r requirements.txt
+      - name: Auto-formatting with black
+        uses: psf/black@stable
+
+      - name: Lint with flake8
+        run: |
+          # here we run soft lint checks: exit-zero treats all errors as warnings
+          # ignore formatting errors (E,W), since they are handled by black
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics --ignore=E,W
+      - name: Run tests with pytest
+        run: |
+          python -m pytest -v

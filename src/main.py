@@ -1,16 +1,18 @@
 import numpy as np
 
 
-def hello_with_lucky_number(name: str, a: int, b: int, seed: int = 0) -> str:
+def lucky_number(name: str, left: int, right: int, seed: int = 0) -> str:
     """
     Example function.
 
     :param name:
-    :param a:
-    :param b:
+    :param left:
+    :param right:
     :param seed:
     :return:
     """
+    if left > right:
+        raise ValueError("left <= right violated!")
     np.random.seed(seed)
-    num = np.random.choice(list(range(a, b)), 1)[0]
+    num = np.random.choice(list(range(left, right)), 1)[0]
     return f"Hello {name}! Your lucky number is {num}!"
