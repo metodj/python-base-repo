@@ -2,7 +2,7 @@
 An example repository for Python projects that aims to use some of the best software development practices.
 
 ## Dependencies
-* Python >= 3.10
+* Python = 3.8
 * Anaconda >= 4.10
 
 ## Setup
@@ -39,7 +39,7 @@ your code on every save.
 ## Deployment
 
 ```
-# TODO: 
+# TODO:
 #   - docker
 #   - k8s, skaffold
 #   - python package release (setup.py)
@@ -51,6 +51,3 @@ your code on every save.
 - explore [pylint](https://github.com/PyCQA/pylint) linter as an [alternative](https://www.slant.co/versus/12630/12632/~pylint_vs_flake8) to [flake8](https://github.com/PyCQA/flake8)
 - [pdoc3](https://pdoc3.github.io/pdoc/) (or alternatives) for automatic generating of documentation
 - [coverage.py](https://github.com/nedbat/coveragepy) (or alternatives) to track the test coverage in the repo
-
-
-
