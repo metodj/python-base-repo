@@ -2,14 +2,14 @@
 An example repository for Python projects that aims to use some of the best software development practices.
 
 ## Dependencies
-* Python = 3.8
+* Python >= 3.8
 * Anaconda >= 4.10
 
 ## Setup
 1. Clone or download this repo. `cd` yourself to it's root directory.
 2. Set up a Python virtual enviromnent, e.g. using [Anaconda](https://www.anaconda.com/) this can be achieved with:
 
-`$ conda create python=3.10 --name ${env}`
+`$ conda create python=3.8 --name ${env}`
 
 `$ conda activate ${env}`
 
