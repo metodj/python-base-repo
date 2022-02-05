@@ -38,7 +38,12 @@ your code on every save.
 
 ## Deployment
 
-`#TODO: docker, k8s, skaffold`
+```
+# TODO: 
+#   - docker
+#   - k8s, skaffold
+#   - python package release (setup.py)
+ ```
 
 
 ## TODO
